@@ -1,16 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    Name: "",
-    Email: "",
-    Phone: "",
-    Message: "",
+    Name: '',
+    Email: '',
+    Phone: '',
+    Message: ''
   });
 
-  const [responseMsg, setResponseMsg] = useState("");
+  const [responseMsg, setResponseMsg] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,28 +20,23 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+      const res = await fetch('http://localhost:5000/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
       });
 
       const data = await res.json();
+      setResponseMsg(data.message || '✅ Sent!');
+    } catch (err) {
+      setResponseMsg('❌ Error sending message.');
+    } 
 
-      if (!res.ok) throw new Error(data.error || "Something went wrong 😬");
-
-      setStatus("sent");
-      setFormData({ Name: "", Email: "", Phone: "", Message: "" });
-
-      setTimeout(() => setStatus("idle"), 3000);
-    } catch (error) {
-      alert(error.message || "Failed to send message.");
-      setStatus("idle");
-    }
+    setTimeout(() => setResponseMsg(''), 3000);
   };
 
   return (
-    <section id="contact" className="py-16 px-4">
+    <section id='contact' className="py-16 px-4">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold text-center text-blue-800 mb-8">
           Contact Me
@@ -105,3 +100,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

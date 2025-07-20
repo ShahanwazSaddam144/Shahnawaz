@@ -31,7 +31,7 @@ const Contact = () => {
       if (!res.ok) throw new Error(data.error || "Something went wrong 😬");
 
       setStatus("sent");
-      setFormData({ Name: "", Email: "", Phone: "", Message: "" });
+      setFormData({ name: "", email: "", message: "" });
 
       setTimeout(() => setStatus("idle"), 3000);
     } catch (error) {
