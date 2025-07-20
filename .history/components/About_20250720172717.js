@@ -20,7 +20,7 @@ const getLearningDays = () => {
 const About = () => {
   const [currentTime, setCurrentTime] = useState(getLiveTime());
   const [learningDays, setLearningDays] = useState(getLearningDays());
-  const deployedProjects = 3;
+  const deployedProjects = 4;
 
 
   useEffect(() => {
