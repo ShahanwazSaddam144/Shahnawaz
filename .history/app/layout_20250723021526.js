@@ -11,6 +11,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// app/layout.tsx or app/layout.js
+
 export const metadata = {
   title: "Shahnawaz Saddam Butt | Full-Stack Developer",
   description:
@@ -63,7 +65,7 @@ export const metadata = {
   authors: [
     {
       name: "Shahnawaz Saddam Butt",
-      url: "https://shahnawaz.buttnetworks.com",
+      url: "https://shahnawaz.buttnetworks.com/",
     },
   ],
 

@@ -6,6 +6,7 @@ const Footer = () => {
     <footer className="bg-blue-800 text-white py-8 mt-20">
       <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
         
+        {/* Left: Name or Logo */}
         <div className="text-lg font-semibold mb-4 sm:mb-0">
           © {new Date().getFullYear()} Shahnawaz Saddam Butt
         </div>

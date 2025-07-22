@@ -28,12 +28,12 @@ const Projects = () => {
           </div>
 
           <p className="text-center mt-4 mb-1 text-[16px] font-semibold text-gray-900">
-            Next.js • Stripe • OAuth • Tailwind • MongoDB
+            HTML, CSS, JS, Node, MongoDB
           </p>
 
           <p className="text-center text-[15px] text-gray-800 leading-relaxed">
-            A fully functional business website for a web development company
-            that builds the best websites for every purpose.
+            A fully functional business website for a web development company that
+            builds the best websites for every purpose.
           </p>
 
           <a

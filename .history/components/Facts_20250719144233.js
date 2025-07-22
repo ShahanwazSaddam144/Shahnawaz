@@ -8,6 +8,7 @@ const Facts = () => {
         {/* Vertical Blue Line */}
         <div className="w-1 bg-blue-600 rounded-md h-55 xl:h-50"></div>
 
+        {/* Content */}
         <div>
           <h1 className="text-[22px] sm:text-3xl font-bold text-blue-900 mb-4">
             ⚡ Facts

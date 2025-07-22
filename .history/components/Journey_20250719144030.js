@@ -7,7 +7,8 @@ const Journey = () => {
         
         {/* Vertical Blue Line (stays tall on all screen sizes) */}
         <div className="w-1 bg-blue-600 rounded-md h-100 xl:h-70"></div>
-        
+
+        {/* Content */}
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-4">
             🚀 Skills Timeline

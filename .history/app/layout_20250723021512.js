@@ -11,6 +11,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// app/layout.tsx or app/layout.js
+
 export const metadata = {
   title: "Shahnawaz Saddam Butt | Full-Stack Developer",
   description:
@@ -25,7 +27,7 @@ export const metadata = {
     "MongoDB",
     "Portfolio Website",
   ],
-  metadataBase: new URL("https://shahnawaz.buttnetworks.com"), // Replace with your real domain
+  metadataBase: new URL("https://yourdomain.com"), // Replace with your real domain
 
   icons: {
     icon: [
@@ -40,10 +42,11 @@ export const metadata = {
     title: "Shahnawaz Saddam Butt | Full-Stack Developer",
     description:
       "Modern web developer with React, Next.js, Tailwind, and Node.js. Building responsive, full-stack apps at just 15.",
-    url: "https://shahnawaz.buttnetworks.com",
+    url: "https://shahnawaz.buttnetworks.com/",
     siteName: "Shahnawaz Saddam Butt",
     images: [
       {
+        url: "/og-image.png", // 🔥 Optional: Make a banner image (1200x630)
         width: 1200,
         height: 630,
         alt: "Shahnawaz Saddam Butt — Full-Stack Developer",
@@ -60,12 +63,7 @@ export const metadata = {
       "Teen full-stack dev building modern sites with React, Next.js, Tailwind, MongoDB & more.",
   },
 
-  authors: [
-    {
-      name: "Shahnawaz Saddam Butt",
-      url: "https://shahnawaz.buttnetworks.com",
-    },
-  ],
+  authors: [{ name: "Shahnawaz Saddam Butt", url: "https://shahnawaz.buttnetworks.com/" }],
 
   creator: "Shahnawaz Saddam Butt",
   publisher: "Shahnawaz Saddam Butt",
