@@ -28,7 +28,7 @@ const Projects = () => {
           </div>
 
           <p className="text-center mt-4 mb-1 text-[16px] font-semibold text-gray-900">
-            Next.js • Tailwind • MongoDB
+            Next.js •  • OAuth • Tailwind • MongoDB
           </p>
 
           <p className="text-center text-[15px] text-gray-800 leading-relaxed">
