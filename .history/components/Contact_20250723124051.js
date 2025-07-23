@@ -23,13 +23,16 @@ const Contact = () => {
     console.log("🚀 Sending form data:", formData);
 
     try {
-      const res = await fetch("https://wahb.buttnetworks.com/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
+      console.log("📡 Response status:", res.status, res.statusText);
+
       const data = await res.json();
+      console.log("📦 Response body:", data);
 
       if (!res.ok) throw new Error(data.error || "Something went wrong 😬");
 

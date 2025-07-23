@@ -29,7 +29,10 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
+      console.log("📡 Response status:", res.status, res.statusText);
+
       const data = await res.json();
+      console.log("📦 Response body:", data);
 
       if (!res.ok) throw new Error(data.error || "Something went wrong 😬");
 

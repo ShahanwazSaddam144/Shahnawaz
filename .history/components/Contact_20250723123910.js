@@ -4,26 +4,23 @@ import React, { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",    // 🛠️ lowercase to match backend
-    email: "",
-    phone: "",
-    message: "",
+    Name: "",
+    Email: "",
+    Phone: "",
+    Message: "",
   });
 
   const [responseMsg, setResponseMsg] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log("📝 Field changed:", e.target.name, e.target.value);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("🚀 Sending form data:", formData);
-
     try {
-      const res = await fetch("https://wahb.buttnetworks.com/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -33,13 +30,19 @@ const Contact = () => {
 
       if (!res.ok) throw new Error(data.error || "Something went wrong 😬");
 
-      setResponseMsg("✅ Message sent!");
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      setStatus("sent");
+      const [formData, setFormData] = useState({
+  name: "",   // lowercase
+  email: "",
+  phone: "",
+  message: "",
+});
 
-      setTimeout(() => setResponseMsg(""), 3000);
+
+      setTimeout(() => setStatus("idle"), 3000);
     } catch (error) {
-      console.error("❌ Error submitting form:", error.message || error);
       alert(error.message || "Failed to send message.");
+      setStatus("idle");
     }
   };
 
@@ -52,38 +55,38 @@ const Contact = () => {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <input
-            name="name"
+            name="Name"
             placeholder="Your Name"
             onChange={handleChange}
-            value={formData.name}
+            value={formData.Name}
             required
             className="w-full border-b-2 border-gray-300 focus:border-blue-500 px-2 py-2 outline-none transition duration-200"
           />
 
           <input
-            name="email"
+            name="Email"
             type="email"
             placeholder="Your Email"
             onChange={handleChange}
-            value={formData.email}
+            value={formData.Email}
             required
             className="w-full border-b-2 border-gray-300 focus:border-blue-500 px-2 py-2 outline-none transition duration-200"
           />
 
           <input
-            name="phone"
+            name="Phone"
             placeholder="Your Phone"
             onChange={handleChange}
-            value={formData.phone}
+            value={formData.Phone}
             required
             className="w-full border-b-2 border-gray-300 focus:border-blue-500 px-2 py-2 outline-none transition duration-200"
           />
 
           <textarea
-            name="message"
+            name="Message"
             placeholder="Your Message"
             onChange={handleChange}
-            value={formData.message}
+            value={formData.Message}
             required
             rows="4"
             className="w-full border-b-2 border-gray-300 focus:border-blue-500 px-2 py-2 outline-none transition duration-200 resize-none"
