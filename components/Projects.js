@@ -45,7 +45,6 @@ const Projects = () => {
             Live Demo
           </a>
         </div>
-      </div>
         <div
           className="bg-gray-200 cursor-pointer rounded-3xl p-6 shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
           w-full sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto 
@@ -66,7 +65,7 @@ const Projects = () => {
           </p>
 
           <p className="text-center text-[15px] text-gray-800 leading-relaxed">
-           Build a Fully Functional Quiz App with Auth System
+            Build a Fully Functional Quiz App with Auth System!
           </p>
 
           <a
