@@ -50,9 +50,9 @@ const Projects = () => {
           w-full sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto 
           hover:bounce-up transition duration-500"
         >
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-5">
             <Image
-              src="/logo.png"
+              src="/img.jpg"
               alt="Developer"
               width={200}
               height={200}
