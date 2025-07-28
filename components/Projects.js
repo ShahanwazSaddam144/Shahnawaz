@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="bg-gradient-to-br from-gray-200 to-gray-300 py-10 px-4 sm:px-6 lg:px-8"
+      className="bg-gradient-to-br from-gray-200 to-gray-300 py-10 px-4 sm:px-6 lg:px-8 "
     >
       <div className="max-w-5xl mx-auto">
         <h1 className="text-[25px] sm:text-[32px] lg:text-[40px] font-bold text-center mb-10">
@@ -15,7 +15,7 @@ const Projects = () => {
         <div
           className="bg-gray-200 cursor-pointer rounded-3xl p-6 shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
           w-full sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto 
-          hover:bounce-up transition duration-500"
+          hover:bounce-up transition duration-500 mb-5"
         >
           <div className="flex justify-center">
             <Image
@@ -48,7 +48,7 @@ const Projects = () => {
         <div
           className="bg-gray-200 cursor-pointer rounded-3xl p-6 shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
           w-full sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto 
-          hover:bounce-up transition duration-500"
+          hover:bounce-up transition duration-500 mt-5"
         >
           <div className="flex justify-center mt-5">
             <Image
