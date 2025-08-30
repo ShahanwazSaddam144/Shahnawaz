@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="bg-blue-800 text-white p-4 h-auto shadow-md">
       <div className="flex justify-between items-center max-w-6xl mx-auto">
         <h1 className="text-[20px] lg:text-[30px] font-bold">
-          Shahnawaz Saddam Butt
+          Shahnawaz Saddam Buttggf
         </h1>
 
         {/* Hamburger Toggle */}
