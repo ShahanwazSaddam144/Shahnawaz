@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Footer from './components/Footer';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,79 +13,59 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Shahnawaz Saddam Butt | Full-Stack Developer",
+  title: "Shahnawaz Saddam Butt | Full Stack Developer",
   description:
-    "I'm Shahnawaz Saddam Butt — a 15-year-old full-stack developer from Lahore. I build fast, modern websites using Next.js, React, Tailwind, Node.js & MongoDB.",
+    "Shahnawaz Saddam Butt is a passionate Full Stack Developer skilled in Python, JavaScript, and web technologies, currently learning C. Explore my portfolio, projects, and journey in web development.",
   keywords: [
     "Shahnawaz Saddam Butt",
-    "Full-Stack Developer",
+    "Full Stack Developer",
+    "Python Developer",
+    "Learning C",
+    "JavaScript",
+    "Web Developer Portfolio",
     "Next.js Developer",
-    "React Developer",
-    "Teen Programmer",
-    "Web Developer Lahore",
-    "MongoDB",
-    "Portfolio Website",
+    "MERN Stack Developer",
   ],
-  metadataBase: new URL("https://shahnawaz.buttnetworks.com"), // Replace with your real domain
-
-  icons: {
-    icon: [
-      { url: "/favicon.ico", type: "image/x-icon" },
-      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-touch-icon.png",
-  },
-
+  authors: [{ name: "Shahnawaz Saddam Butt" }],
+  creator: "Shahnawaz Saddam Butt",
   openGraph: {
-    title: "Shahnawaz Saddam Butt | Full-Stack Developer",
+    title: "Shahnawaz Saddam Butt | Full Stack Developer",
     description:
-      "Modern web developer with React, Next.js, Tailwind, and Node.js. Building responsive, full-stack apps at just 15.",
-    url: "https://shahnawaz.buttnetworks.com",
+      "Portfolio of Shahnawaz Saddam Butt, a Full Stack Developer with skills in Python, JavaScript, and currently learning C.",
+    url: "https://yourdomain.com", // replace with your actual domain
     siteName: "Shahnawaz Saddam Butt",
     images: [
       {
-        width: 1200,
-        height: 630,
-        alt: "Shahnawaz Saddam Butt — Full-Stack Developer",
+        url: "/butt.png", // logo or profile image
+        width: 800,
+        height: 600,
+        alt: "Shahnawaz Saddam Butt - Full Stack Developer",
       },
     ],
     locale: "en_US",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "Shahnawaz Saddam Butt | Full-Stack Developer",
+    title: "Shahnawaz Saddam Butt | Full Stack Developer",
     description:
-      "Teen full-stack dev building modern sites with React, Next.js, Tailwind, MongoDB & more.",
+      "Hi, I'm Shahnawaz Saddam Butt. A Full Stack Developer skilled in Python, JavaScript, and learning C.",
+    images: ["/butt.png"],
+    creator: "@your_twitter_handle", // replace if you have Twitter
   },
-
-  authors: [
-    {
-      name: "Shahnawaz Saddam Butt",
-      url: "https://shahnawaz.buttnetworks.com",
-    },
-  ],
-
-  creator: "Shahnawaz Saddam Butt",
-  publisher: "Shahnawaz Saddam Butt",
-  applicationName: "Portfolio of Shahnawaz",
+  icons: {
+    icon: "/butt.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="theme-color" content="#0f172a" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Footer/>
       </body>
     </html>
   );
